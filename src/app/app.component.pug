@@ -1,7 +1,13 @@
-nav
-  a(routerLink="/") Home
-  | &nbsp;|&nbsp;
-  a(routerLink="/about") About
+nav.navbar.navbar-fixed-top.navbar-dark.bg-inverse.status-bar
+  a.navbar-brand(routerLink="/") Electronic Detecitve
+     
+  ul.nav.navbar-nav
+    li.nav-item
+      a.nav-link(routerLink="/suspects", routerLinkActive="active") Interrogation
+    li.nav-item
+      a.nav-link(routerLink="/case-file", routerLinkActive="active") Case File
+    li.nav-item
+      a.nav-link(routerLink="/about", routerLinkActive="active") About
 
-h1 {{title}}
-router-outlet
+.container
+  router-outlet

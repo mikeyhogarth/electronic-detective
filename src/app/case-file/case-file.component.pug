@@ -1,0 +1,45 @@
+fieldset.form-group
+  legend The Murder Facts
+  p 
+    | The victim was 
+    strong {{victim}}
+    |, the body was found at 
+    strong {{murderLocation}}
+    |.
+
+  label Sex of the murderer
+  .form-check
+    label.form-check-inline
+      input.form-check-input(type="radio", name="murdererSex", value="male") 
+      | Male
+    label.form-check-inline
+      input.form-check-input(type="radio", name="murdererSex", value="female") 
+      | Female
+
+  label Where did the murderer go?
+  .form-check
+    label.form-check-inline
+      input.form-check-input(type="checkbox", name="murdererLocation", value="eastside") 
+      | East Side
+    label.form-check-inline
+      input.form-check-input(type="checkbox", name="murdererLocation", value="westside") 
+      | West Side
+    br
+    label.form-check-inline
+      input.form-check-input(type="checkbox", name="murdererLocation", value="uptown") 
+      | Uptown
+    label.form-check-inline
+      input.form-check-input(type="checkbox", name="murdererLocation", value="midtown") 
+      | Midtown
+    label.form-check-inline
+      input.form-check-input(type="checkbox", name="murdererLocation", value="downtown") 
+      | Downtown
+
+  label Weapon Used
+  .form-check
+    label.form-check-inline
+      input.form-check-input(type="radio", name="murderWeapon", value="38") 
+      | .38
+    label.form-check-inline
+      input.form-check-input(type="radio", name="murderWeapon", value="45") 
+      | .45
