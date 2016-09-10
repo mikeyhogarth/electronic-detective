@@ -2,44 +2,44 @@ fieldset.form-group
   legend The Murder Facts
   p 
     | The victim was 
-    strong {{victim}}
+    strong {{caseFile.victim}}
     |, the body was found at 
-    strong {{murderLocation}}
+    strong {{caseFile.murderLocation}}
     |.
-
-  label Sex of the murderer
+  
+  label Sex of the murderer ( {{caseFile.murdererSex}} )
   .form-check
     label.form-check-inline
-      input.form-check-input(type="radio", name="murdererSex", value="male") 
+      input.form-check-input(type="radio", name="murdererSex", value="male", [(ngModel)]="caseFile.murdererSex") 
       | Male
     label.form-check-inline
-      input.form-check-input(type="radio", name="murdererSex", value="female") 
+      input.form-check-input(type="radio", name="murdererSex", value="female", [(ngModel)]="caseFile.murdererSex") 
       | Female
 
-  label Where did the murderer go?
+  label Where did the murderer go? {{ caseFile.locations | json}}
   .form-check
     label.form-check-inline
-      input.form-check-input(type="checkbox", name="murdererLocation", value="eastside") 
+      input.form-check-input(type="checkbox", name="murdererLocation", [(ngModel)]='caseFile.locations.eastside') 
       | East Side
     label.form-check-inline
-      input.form-check-input(type="checkbox", name="murdererLocation", value="westside") 
+      input.form-check-input(type="checkbox", name="murdererLocation", [(ngModel)]='caseFile.locations.westside') 
       | West Side
     br
     label.form-check-inline
-      input.form-check-input(type="checkbox", name="murdererLocation", value="uptown") 
+      input.form-check-input(type="checkbox", name="murdererLocation", [(ngModel)]='caseFile.locations.uptown') 
       | Uptown
     label.form-check-inline
-      input.form-check-input(type="checkbox", name="murdererLocation", value="midtown") 
+      input.form-check-input(type="checkbox", name="murdererLocation", [(ngModel)]='caseFile.locations.midtown') 
       | Midtown
     label.form-check-inline
-      input.form-check-input(type="checkbox", name="murdererLocation", value="downtown") 
+      input.form-check-input(type="checkbox", name="murdererLocation", [(ngModel)]='caseFile.locations.downtown') 
       | Downtown
 
-  label Weapon Used
+  label Weapon Used ( {{ caseFile.murderWeapon }} )
   .form-check
     label.form-check-inline
-      input.form-check-input(type="radio", name="murderWeapon", value="38") 
+      input.form-check-input(type="radio", name="murderWeapon", value="38", [(ngModel)]="caseFile.murderWeapon") 
       | .38
     label.form-check-inline
-      input.form-check-input(type="radio", name="murderWeapon", value="45") 
+      input.form-check-input(type="radio", name="murderWeapon", value="45", [(ngModel)]="caseFile.murderWeapon") 
       | .45
