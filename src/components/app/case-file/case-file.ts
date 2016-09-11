@@ -8,5 +8,3 @@ export class CaseFile {
   constructor() {
   }
 }
-
-export const caseFile = new CaseFile();

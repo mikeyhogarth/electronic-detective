@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { caseFile, CaseFile } from './case-file';
+import { CaseFile } from './case-file';
+import { CaseFileService } from '../../../services/case-file.service';
 const template = require('./case-file.component.pug');
 
 
@@ -10,10 +11,10 @@ const template = require('./case-file.component.pug');
 export class CaseFileComponent implements OnInit {
   caseFile:CaseFile;
 
-  constructor() {  
+  constructor(private caseFileService:CaseFileService) {  
   }
 
   ngOnInit() { 
-    this.caseFile = caseFile;
+    this.caseFile = this.caseFileService.getCaseFile();
   }
 }
