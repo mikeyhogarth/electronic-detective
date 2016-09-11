@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { CrimeService } from '../../../services/crime.service';
+
 const template = require('./suspects.component.pug');
 
 @Component({
@@ -6,5 +8,5 @@ const template = require('./suspects.component.pug');
   template: template() 
 })
 export class SuspectsComponent {
-  constructor() { }
+  constructor(private crimeService:CrimeService) { }
 }

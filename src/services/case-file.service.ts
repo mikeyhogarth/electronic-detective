@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { CaseFile } from '../components/app/case-file/case-file';
+import { CaseFile } from '../models/case-file';
 
 @Injectable()
 export class CaseFileService {
@@ -9,11 +9,11 @@ export class CaseFileService {
     this.resetCaseFile();
   }
 
-  resetCaseFile() {
+  resetCaseFile() : void {
     this.caseFile = new CaseFile();
   }
 
-  getCaseFile() {
+  getCaseFile() : CaseFile {
     return this.caseFile;
   }
 }
